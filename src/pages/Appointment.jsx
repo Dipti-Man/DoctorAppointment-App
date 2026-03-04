@@ -61,7 +61,9 @@ const Appointment = () => {
                 let month = currentDate.getMonth() + 1
                 let year = currentDate.getFullYear()
 
-                const slotDate = day + "_" + month + "_" + year
+               const slotDate = day + "_" + month + "_" + year 
+             //  const slotDate = currentDate.toISOString().split("T")[0]
+
                 const slotTime = formattedTime
 
                 const isSlotAvailable = docInfo.slots_booked[slotDate] && docInfo.slots_booked[slotDate].includes(slotTime) ? false : true
@@ -98,7 +100,8 @@ const Appointment = () => {
         let month = date.getMonth() + 1
         let year = date.getFullYear()
 
-        const slotDate = day + "_" + month + "_" + year
+       const slotDate = day + "_" + month + "_" + year    
+      // const slotDate = date.toISOString().split("T")[0]
 
         try {
 
